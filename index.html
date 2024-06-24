@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSnap!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <img src="img/super-hero.png" alt="Player Character" class="character-image">
+        <div class="game-board">
+            <h1>CyberSnap!</h1>
+            <div class="difficulty-selector">
+                <label for="difficultySelect">Difficulty:</label>
+                <select id="difficultySelect">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="card-area">
+                <div class="card-stack">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div id="currentCard" class="card"></div>
+                </div>
+            </div>
+            <button id="dealBtn">Deal Card</button>
+            <button id="snapBtn">Snap!</button>
+            <div id="message"></div>
+            <div id="scores">
+                <div class="score-container">
+                    <p>Player Score: <span id="playerScore">0</span></p>
+                    <div class="score-bar">
+                        <div id="playerScoreBar" class="score-progress"></div>
+                    </div>
+                </div>
+                <div class="score-container">
+                    <p>CPU Score: <span id="cpuScore">0</span></p>
+                    <div class="score-bar">
+                        <div id="cpuScoreBar" class="score-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="img/super-hacker.png" alt="CPU Character" class="character-image">
+    </div>
+
+    <script src="js/cyberConcepts.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
