@@ -180,3 +180,145 @@ button:active {
     background: linear-gradient(90deg, #00ff00, #00ccff);
     transition: width 0.5s ease;
 }
+
+.start-menu {
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.start-menu h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.start-menu button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: rgba(20, 20, 20, 0.9);
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.modal h2 {
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+.modal p {
+    margin-bottom: 10px;
+}
+
+.modal button {
+    display: block;
+    margin: 20px auto 0;
+}
+
+#cardInfoContent {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+#cardInfoContent::-webkit-scrollbar {
+    width: 10px;
+}
+
+#cardInfoContent::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+#cardInfoContent::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 5px;
+}
+
+#cardInfoContent::-webkit-scrollbar-thumb:hover {
+    background: #00ccff;
+}
+
+.concept-info {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.concept-info:last-child {
+    border-bottom: none;
+}
+
+.concept-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.concept-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.concept-info h3 {
+    margin: 0;
+    color: #00ff00;
+}
+
+.concept-info p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.game-over-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.game-over-menu h2 {
+    font-size: 36px;
+    color: #00ff00;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.game-over-menu p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.game-over-menu button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+}
