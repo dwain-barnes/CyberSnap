@@ -7,10 +7,37 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="game-container">
-        <img src="img/super-hero.png" alt="Player Character" class="character-image">
-        <div class="game-board">
-            <h1>CyberSnap!</h1>
+    <div id="startMenu" class="start-menu">
+        <h1>CyberSnap!</h1>
+        <button id="startGameBtn">Start Game</button>
+        <button id="howToPlayBtn">How to Play</button>
+        <button id="infoBtn">Information</button>
+        <button id="settingsBtn">Settings</button>
+    </div>
+
+    <div id="howToPlayModal" class="modal">
+        <div class="modal-content">
+            <h2>How to Play</h2>
+            <p>1. Click "Deal Card" to reveal a new card.</p>
+            <p>2. If the new card matches the previous card, quickly click "Snap!"</p>
+            <p>3. Be faster than the CPU to earn points.</p>
+            <p>4. The game ends when all cards are dealt.</p>
+            <p>5. The player with the most points wins!</p>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <h2>Card Information</h2>
+            <div id="cardInfoContent"></div>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h2>Settings</h2>
             <div class="difficulty-selector">
                 <label for="difficultySelect">Difficulty:</label>
                 <select id="difficultySelect">
@@ -19,6 +46,14 @@
                     <option value="hard">Hard</option>
                 </select>
             </div>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <div id="gameContainer" class="game-container" style="display: none;">
+        <img src="img/super-hero.png" alt="Player Character" class="character-image">
+        <div class="game-board">
+            <h1>CyberSnap!</h1>
             <div class="card-area">
                 <div class="card-stack">
                     <div class="card"></div>
@@ -47,6 +82,27 @@
         </div>
         <img src="img/super-hacker.png" alt="CPU Character" class="character-image">
     </div>
+
+    <div id="gameOverMenu" class="game-over-menu" style="display: none;">
+        <h2>Game Over!</h2>
+        <p id="finalMessage"></p>
+        <button id="playAgainBtn">Play Again</button>
+        <button id="mainMenuBtn">Main Menu</button>
+    </div>
+
+    <!-- Add audio elements -->
+    <audio id="backgroundAudio" loop>
+        <source src="audio/background.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="flipAudio">
+        <source src="audio/flip.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="matchAudio">
+        <source src="audio/match.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="mismatchAudio">
+        <source src="audio/mismatch.mp3" type="audio/mpeg">
+    </audio>
 
     <script src="js/cyberConcepts.js"></script>
     <script src="js/script.js"></script>
